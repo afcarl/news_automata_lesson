@@ -8,3 +8,5 @@ if [ ! -f ~/.bash_profile ]; then
 fi
 
 echo "PATH=\$PATH:~/Library/Python/2.7/bin" >> ~/.bash_profile
+
+rm get-pip.py
