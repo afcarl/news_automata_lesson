@@ -27,7 +27,15 @@ mappings = {
     'Beijing': 'Washington',
     'Hong Kong': 'Ferguson'
 }
-new_doc =  flip_words(doc, mappings)
+new_doc = flip_words(doc, mappings)
+print(new_doc)
+
+
+# example using a class!!
+from flipper import Flipper
+print('\n~~ flipping with a class ~~\n')
+f = Flipper(mappings)
+new_doc = f.flip(doc)
 print(new_doc)
 
 
