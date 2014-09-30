@@ -43,7 +43,10 @@ print(new_doc)
 # pip install requests
 # pip install readability-lxml
 import requests
-from readability.readability import Document
+
+# since readability-lxml is tricky to install without sudo,
+# skip it for now.
+#from readability.readability import Document
 
 print('\n~~ flipping from urls ~~\n')
 
@@ -55,9 +58,10 @@ urls = [
 for url in urls:
     response = requests.get(url)
 
-    doc = Document(response.content).summary()
-    new_doc = flip_words(doc, mappings)
-    #new_doc = flip_words(response.content.decode('utf-8'), mappings)
+    #doc = Document(response.content).summary()
+    #new_doc = flip_words(doc, mappings)
+
+    new_doc = flip_words(response.content.decode('utf-8'), mappings)
 
     # splice in encoding info so it renders properly in the browser
     if '<head>' in new_doc:
