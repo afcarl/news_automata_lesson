@@ -1,6 +1,6 @@
 # sets up pip on a non-privileged user account (i.e. w/o sudo)
 
-curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+curl -O https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py
 python get-pip.py --user
 
 if [ ! -f ~/.bash_profile ]; then
